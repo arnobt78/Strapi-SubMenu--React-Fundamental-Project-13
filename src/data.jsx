@@ -56,7 +56,7 @@ const sublinks = [
         id: nanoid(),
         label: 'business teams',
         icon: <FaBtc />,
-        url: '/solutions/business teams',
+        url: '/solutions/business-teams',
       },
       {
         id: nanoid(),

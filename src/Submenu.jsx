@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useGlobalContext } from './Context';
 import sublinks from './data';
 import { useRef } from 'react';
@@ -33,10 +34,10 @@ const Submenu = () => {
         {currentPage?.links?.map((link) => {
           const { id, url, label, icon } = link;
           return (
-            <a key={id} href={url}>
+            <Link key={id} to={url}>
               {icon}
               {label}
-            </a>
+            </Link>
           );
         })}
       </div>

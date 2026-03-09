@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from './Context';
 import sublinks from './data';
@@ -19,10 +20,10 @@ const Sidebar = () => {
                   {links.map((link) => {
                     const { url, icon, label, id } = link;
                     return (
-                      <a key={id} href={url}>
+                      <Link key={id} to={url} onClick={closeSidebar}>
                         {icon}
                         {label}
-                      </a>
+                      </Link>
                     );
                   })}
                 </div>
