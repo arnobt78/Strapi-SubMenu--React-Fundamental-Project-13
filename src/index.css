@@ -424,6 +424,12 @@ Sidebar
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--borderRadius);
+  transition: var(--transition);
+}
+.sidebar-sublinks a:hover {
+  background: var(--primary-100);
 }
 .sidebar-sublinks svg {
   color: var(--grey-500);
@@ -514,6 +520,12 @@ Submenu
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 0.35rem 0.5rem;
+    border-radius: var(--borderRadius);
+    transition: var(--transition);
+  }
+  .submenu-links a:hover {
+    background: var(--primary-100);
   }
   .submenu-links svg {
     color: var(--grey-500);
