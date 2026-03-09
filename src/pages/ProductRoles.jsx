@@ -1,3 +1,4 @@
+/** Route: /product/roles. Educational content about Strapi roles and RBAC. */
 const ProductRoles = () => {
   return (
     <div className='page-content'>

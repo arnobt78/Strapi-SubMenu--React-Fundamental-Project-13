@@ -325,6 +325,7 @@ Hero
 }
 
 /* ============= Page content (submenu routes) =============== */
+/* Used by all route pages in src/pages/ for centered, readable layout (max-width 40rem) */
 .page-content {
   min-height: calc(100vh - 5rem);
   display: flex;

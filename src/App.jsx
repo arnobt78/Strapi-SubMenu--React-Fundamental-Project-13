@@ -1,3 +1,8 @@
+/**
+ * Root layout component. Composes the shell: Navbar, route content, Sidebar, Submenu.
+ * Routes define which component renders in the middle (Hero for "/", page components for submenu paths).
+ * Navbar, Sidebar, and Submenu are always mounted so context-driven UI (e.g. submenu visibility) works.
+ */
 import { Routes, Route } from 'react-router-dom';
 import Hero from './Hero';
 import Navbar from './Navbar';
@@ -17,6 +22,7 @@ const App = () => {
   return (
     <main>
       <Navbar />
+      {/* Client-side routes; only the matched Route's element is rendered here */}
       <Routes>
         <Route path='/' element={<Hero />} />
         <Route path='/product/community' element={<ProductCommunity />} />

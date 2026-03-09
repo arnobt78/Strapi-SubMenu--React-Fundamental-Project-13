@@ -1,3 +1,7 @@
+/**
+ * Global UI state for navigation: sidebar open/close and which submenu is active (pageId).
+ * Any component can read/update this via useGlobalContext() without prop drilling.
+ */
 import { createContext, useState, useContext } from 'react';
 
 const AppContext = createContext();
@@ -20,6 +24,7 @@ export const AppProvider = ({ children }) => {
   );
 };
 
+/** Custom hook: use this in any component to access or update sidebar/submenu state */
 export const useGlobalContext = () => {
   return useContext(AppContext);
 };

@@ -1,3 +1,4 @@
+/** Route: /resources/showcase. Educational content about Strapi showcase. */
 const ResourcesShowcase = () => {
   return (
     <div className='page-content'>

@@ -76,7 +76,7 @@ No TypeScript, no backend, no database.
 
 ## Project Structure
 
-```
+```bash
 13-strapi-submenus/
 ├── public/
 │   └── vite.svg                 # Favicon / OG image

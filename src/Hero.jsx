@@ -1,3 +1,4 @@
+/** Home page content for route "/". Centered hero section with title and short Strapi intro. */
 const Hero = () => {
   return (
     <div className='hero-container'>

@@ -1,3 +1,4 @@
+/** Route: /solutions/content-managers. Educational content for content managers. */
 const SolutionsContentManagers = () => {
   return (
     <div className='page-content'>

@@ -1,3 +1,4 @@
+/** Route: /product/content. Educational content about Strapi content management. */
 const ProductContent = () => {
   return (
     <div className='page-content'>

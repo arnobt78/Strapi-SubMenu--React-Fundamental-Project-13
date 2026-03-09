@@ -1,3 +1,7 @@
+/**
+ * Top navigation bar: logo, hamburger (opens sidebar on mobile), and desktop NavLinks.
+ * handleSubmenu: when mouse is over the nav but not on a nav-link button, hide the submenu by clearing pageId.
+ */
 import { FaBars } from 'react-icons/fa';
 import { useGlobalContext } from './Context';
 import NavLinks from './NavLinks';

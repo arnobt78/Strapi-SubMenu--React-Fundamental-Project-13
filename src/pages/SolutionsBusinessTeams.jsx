@@ -1,3 +1,4 @@
+/** Route: /solutions/business-teams. Educational content for business teams. */
 const SolutionsBusinessTeams = () => {
   return (
     <div className='page-content'>

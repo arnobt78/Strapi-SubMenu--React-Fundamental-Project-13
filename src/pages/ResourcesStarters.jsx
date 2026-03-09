@@ -1,3 +1,4 @@
+/** Route: /resources/starters. Educational content about Strapi starters. */
 const ResourcesStarters = () => {
   return (
     <div className='page-content'>

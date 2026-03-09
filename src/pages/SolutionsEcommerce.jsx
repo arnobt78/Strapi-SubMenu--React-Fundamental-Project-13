@@ -1,3 +1,4 @@
+/** Route: /solutions/ecommerce. Educational content about Strapi and ecommerce. */
 const SolutionsEcommerce = () => {
   return (
     <div className='page-content'>

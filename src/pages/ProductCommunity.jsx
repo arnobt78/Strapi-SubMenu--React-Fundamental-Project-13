@@ -1,3 +1,4 @@
+/** Route: /product/community. Page content uses .page-content for centered, readable layout. */
 const ProductCommunity = () => {
   return (
     <div className='page-content'>

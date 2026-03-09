@@ -1,3 +1,8 @@
+/**
+ * Single source of truth for navigation. Used by NavLinks, Sidebar, and Submenu.
+ * Each item: pageId (unique), page (group name), links (array of { id, label, icon, url }).
+ * url must match a Route path in App.jsx for client-side routing to work.
+ */
 import {
   Fa500Px,
   FaAccusoft,

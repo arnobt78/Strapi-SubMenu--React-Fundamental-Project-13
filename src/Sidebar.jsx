@@ -1,3 +1,8 @@
+/**
+ * Mobile sidebar overlay. Visible when isSidebarOpen is true (toggle from Navbar).
+ * Renders the same sublinks data as Submenu; uses React Router Link for SPA navigation.
+ * onClick={closeSidebar} closes the overlay when a link is clicked.
+ */
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from './Context';

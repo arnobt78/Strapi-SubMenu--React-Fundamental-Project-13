@@ -1,3 +1,4 @@
+/** Route: /solutions/developers. Educational content for developers using Strapi. */
 const SolutionsDevelopers = () => {
   return (
     <div className='page-content'>

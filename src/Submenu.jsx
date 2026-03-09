@@ -1,3 +1,8 @@
+/**
+ * Desktop dropdown submenu. Shown when pageId is set (by hovering a nav-link in NavLinks).
+ * currentPage is the sublinks entry whose pageId matches; we render its links as React Router Links.
+ * handleMouseLeave hides the submenu when the cursor leaves the panel (bounds check via getBoundingClientRect).
+ */
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from './Context';
 import sublinks from './data';
@@ -24,6 +29,7 @@ const Submenu = () => {
       ref={submenuContainer}
     >
       <h5>{currentPage?.page}</h5>
+      {/* Two columns when a group has more than 3 links for better layout */}
       <div
         className='submenu-links'
         style={{
