@@ -1,12 +1,6 @@
-# Strapi Submenus – React Fundamental Project 13
+# Strapi Sub Menu Navigation System – React, Vite, JavaScript, Context API, Custom CSS Fundamental Project 13
 
-<img width="1149" alt="Screenshot 2025-02-09 at 16 26 39" src="https://github.com/user-attachments/assets/3a8394f6-c5a8-4af3-9705-7fd5d48886b6" />
-
----
-
-A hands-on project demonstrating how to build a modern, fully responsive navigation system with submenus in React. This app showcases component-driven design, React Context for state management, dynamic rendering of menu structures, and advanced CSS for a sophisticated user experience. It is an excellent resource for learning and teaching React fundamentals, state patterns, and interface design.
-
-- **Live Demo:** [https://strapi-submenus-arnob.netlify.app/](https://strapi-submenus-arnob.netlify.app/)
+- **Live Demo:** []()
 
 ---
 
@@ -83,6 +77,7 @@ Strapi-Submenus--React-Fundamental-Project-13/
 ```
 
 **Key Files:**
+
 - `App.jsx` – Main entry, renders all UI components
 - `Context.jsx` – Provides global state (sidebar/submenu open, pageId, handlers)
 - `Navbar.jsx` – Top navigation bar, logo, and toggle button
@@ -99,7 +94,7 @@ Strapi-Submenus--React-Fundamental-Project-13/
 
 1. **Data-driven UI:** All navigation links and submenus are defined in `data.jsx` as an array of pages, each with its own links and icons.
 2. **Global Context:** The `Context.jsx` file exposes state and handlers for opening/closing the sidebar and submenu, as well as tracking the currently active submenu (`pageId`).
-3. **Sidebar & Submenu:** 
+3. **Sidebar & Submenu:**
    - The sidebar displays all navigation groups and their sublinks, shown/hidden via context state and animated with CSS.
    - The submenu appears near the hovered navigation link, dynamically displaying relevant sublinks based on the current `pageId`.
 4. **Responsive & Accessible:** The navigation adapts to screen size, showing the sidebar toggle on mobile and horizontal nav with submenus on desktop.
@@ -110,17 +105,20 @@ Strapi-Submenus--React-Fundamental-Project-13/
 ## Setup & Running Instructions
 
 1. **Clone the repository:**
+
    ```sh
    git clone https://github.com/arnobt78/Strapi-Submenus--React-Fundamental-Project-13.git
    cd Strapi-Submenus--React-Fundamental-Project-13
    ```
 
 2. **Install dependencies:**
+
    ```sh
    npm install
    ```
 
 3. **Run the development server:**
+
    ```sh
    npm run dev
    ```
@@ -135,10 +133,10 @@ Strapi-Submenus--React-Fundamental-Project-13/
 ### App.jsx
 
 ```javascript
-import Hero from './Hero';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
-import Submenu from './Submenu';
+import Hero from "./Hero";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+import Submenu from "./Submenu";
 
 const App = () => (
   <main>
@@ -165,23 +163,23 @@ export default App;
 ### Sidebar.jsx
 
 ```javascript
-import { FaTimes } from 'react-icons/fa';
-import { useGlobalContext } from './Context';
-import sublinks from './data';
+import { FaTimes } from "react-icons/fa";
+import { useGlobalContext } from "./Context";
+import sublinks from "./data";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <aside className={isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}>
-      <div className='sidebar-container'>
-        <button className='close-btn' onClick={closeSidebar}>
+    <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
+      <div className="sidebar-container">
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
-        <div className='sidebar-links'>
+        <div className="sidebar-links">
           {sublinks.map(({ links, page, pageId }) => (
             <article key={pageId}>
               <h4>{page}</h4>
-              <div className='sidebar-sublinks'>
+              <div className="sidebar-sublinks">
                 {links.map(({ url, icon, label, id }) => (
                   <a key={id} href={url}>
                     {icon}
@@ -215,13 +213,14 @@ Displays a welcoming hero section:
 
 ```javascript
 const Hero = () => (
-  <div className='hero-container'>
-    <div className='hero-center'>
+  <div className="hero-container">
+    <div className="hero-center">
       <h1>
         Manage Any Content <br /> Anywhere
       </h1>
       <p>
-        Strapi is the leading open-source headless CMS. It’s 100% JavaScript and fully customizable.
+        Strapi is the leading open-source headless CMS. It’s 100% JavaScript and
+        fully customizable.
       </p>
     </div>
   </div>
@@ -239,13 +238,13 @@ export default Hero;
 const sublinks = [
   {
     pageId: nanoid(),
-    page: 'product',
+    page: "product",
     links: [
       {
         id: nanoid(),
-        label: 'community',
+        label: "community",
         icon: <Fa500Px />,
-        url: '/product/community',
+        url: "/product/community",
       },
       // ...more links
     ],
@@ -274,7 +273,9 @@ export default sublinks;
     transform: rotateX(-90deg) translateX(-50%);
     transform-origin: top;
     perspective: 1000px;
-    transition: transform 0.3s, opacity 0.2s;
+    transition:
+      transform 0.3s,
+      opacity 0.2s;
     /* ... */
   }
   .show-submenu {
@@ -303,15 +304,25 @@ export default sublinks;
 
 ```javascript
 const { openSidebar } = useGlobalContext();
-<button className="toggle-btn" onClick={openSidebar}>Open Sidebar</button>
+<button className="toggle-btn" onClick={openSidebar}>
+  Open Sidebar
+</button>;
 ```
 
 ### Rendering NavLinks
 
 ```javascript
-{ sublinks.map(({ page, pageId }) => (
-  <button
-    key={pageId}
+{
+  sublinks.map(({ page, pageId }) => (
+    <button
+      key={pageId}
+      className="nav-link"
+      onMouseOver={() => setPageId(pageId)}
+    >
+      {page}
+    </button>
+  ));
+  key={pageId}
     className="nav-link"
     onMouseOver={() => setPageId(pageId)}
   >
