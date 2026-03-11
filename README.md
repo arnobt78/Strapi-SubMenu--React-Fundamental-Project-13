@@ -10,7 +10,7 @@ An educational React application that demonstrates how to build a responsive, St
 
 - **Live Demo:** [https://strapi-nav-menu.vercel.app/](https://strapi-nav-menu.vercel.app/)
 
----
+<img width="1530" height="905" alt="Screenshot 2026-03-11 at 16 00 45" src="https://github.com/user-attachments/assets/a57750f8-2df2-462a-9470-b1dd4657597c" />
 
 ## Table of Contents
 
